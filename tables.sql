@@ -1,0 +1,153 @@
+-- create table i213_stations(station_id char(9) primary key,station_name varchar(100));
+-- insert into i213_stations values('BZA','Vijayawada Junction'),('CHE','Srikakulam'),('VSKP','Vishakapatnam Junction'),
+-- ('TPTY','Tirupathi'),('RJY','Rajahmundry'),('OGL','Ongole'),('GDR','Gudur Junction'),('NLR','Nellore');
+-- select * from i213_stations
+-- CREATE TABLE i213_trains (
+--     train_no numeric primary key,
+--     train_name varchar(100),
+--     train_schedule char(7)
+-- );
+
+-- INSERT INTO i213_trains (train_no, train_name, train_schedule)
+-- VALUES
+-- (12727, 'Godavari SF Express', 'mtwrfss'),
+-- (12728, 'Godavari SF Express', 'mtwrfss'), 
+-- (12761, 'Tirupati - Karimnagar SF Express', 'xxwxxxx'), 
+-- (12762, 'Karimnagar - Tirupati SF Express', 'xxxxfxx'), 
+-- (12795, 'Venkatadri SF Express', 'mtwxxxx'),  
+-- (12796, 'Venkatadri SF Express', 'xxxtfxx'),  
+-- (12797, 'Venkatadri SF Express', 'mxxxxxs'), 
+-- (12798, 'Venkatadri SF Express', 'xxxtfxx'), 
+-- (12805, 'Janmabhoomi SF Express', 'mtwxxxx'),
+-- (12806, 'Janmabhoomi SF Express', 'xxxxfxx'),  
+-- (12807, 'Janmabhoomi SF Express', 'xxxtxxx'), 
+-- (12808, 'Janmabhoomi SF Express', 'xxxtfsx'),
+-- (12809, 'Mumbai LTT - Nizamabad SF Express', 'mtwrfss'),  
+-- (12810, 'Nizamabad - Mumbai LTT SF Express', 'mtwrfss'),  
+-- (12833, 'Ahmedabad - Visakhapatnam SF Express', 'xxxxxxs'), 
+-- (12834, 'Visakhapatnam - Ahmedabad SF Express', 'xxxxxxs'),  
+-- (12839, 'Howrah - Chennai Mail', 'mtwrfss'),  
+-- (12840, 'Chennai - Howrah Mail', 'mtwrfss'),  
+-- (12861, 'Link SF Express', 'mtwxxxx'), 
+-- (12862, 'Link SF Express', 'xxxxxxu'),  
+-- (12863, 'Link SF Express', 'mtxxxxx'),  
+-- (12864, 'Link SF Express', 'xxxxxxu'),  
+-- (12895, 'BZA - RMM SF Express', 'mtwxxxx'),  
+-- (12896, 'RMM - BZA SF Express', 'xxxtfsx'),  
+-- (12703, 'Falaknuma SF Express', 'mtwrfss'), 
+-- (12704, 'Falaknuma SF Express', 'mtwrfss'), 
+-- (12705, 'Guntur - Kacheguda SF Express', 'xtwtxxx'), 
+-- (12706, 'Kacheguda - Guntur SF Express', 'xxxxfss');
+
+-- CREATE TABLE i213_trainstations (
+--     train_no numeric,
+--     station_id char(9),
+--     trst_index int,
+--     trst_arrival time,
+--     trst_departure time,
+--     PRIMARY KEY(train_no, station_id),
+--     FOREIGN KEY (train_no) REFERENCES i213_trains(train_no),
+--     FOREIGN KEY (station_id) REFERENCES i213_stations(station_id)
+-- );
+
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12727, 'CHE', 1, '01:04', '19:00');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12727, 'GDR', 2, '02:45', '12:08');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12727, 'NLR', 3, '22:33', '23:03');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12727, 'OGL', 4, '01:38', '02:18');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12727, 'RJY', 5, '17:02', '18:37');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12728, 'CHE', 1, '20:58', '15:37');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12728, 'OGL', 2, '14:43', '13:46');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12728, 'RJY', 3, '17:20', '13:32');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12761, 'NLR', 1, '16:42', '21:22');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12761, 'OGL', 2, '08:01', '13:25');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12761, 'TPTY', 3, '04:05', '06:36');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12761, 'VSKP', 4, '08:05', '19:53');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12762, 'GDR', 1, '11:44', '02:54');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12762, 'OGL', 2, '09:59', '08:22');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12795, 'CHE', 1, '14:26', '15:10');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12795, 'NLR', 2, '22:04', '22:19');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12795, 'OGL', 3, '02:06', '09:49');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12795, 'TPTY', 4, '07:17', '04:12');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12795, 'VSKP', 5, '19:32', '10:37');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12796, 'RJY', 1, '09:20', '19:45');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12796, 'TPTY', 2, '21:35', '21:54');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12796, 'VSKP', 3, '05:16', '18:32');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12797, 'BZA', 1, '20:39', '13:10');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12797, 'CHE', 2, '03:20', '02:55');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12797, 'NLR', 3, '09:33', '18:55');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12797, 'TPTY', 4, '00:27', '19:05');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12798, 'BZA', 1, '11:29', '16:36');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12798, 'GDR', 2, '10:35', '02:30');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12805, 'BZA', 1, '05:40', '00:22');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12805, 'OGL', 2, '21:11', '05:14');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12806, 'GDR', 1, '23:46', '19:07');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12806, 'NLR', 2, '06:52', '02:57');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12806, 'OGL', 3, '23:20', '21:11');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12806, 'RJY', 4, '20:05', '01:45');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12807, 'GDR', 1, '21:27', '14:48');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12807, 'NLR', 2, '11:13', '04:30');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12807, 'TPTY', 3, '10:17', '12:44');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12807, 'VSKP', 4, '02:32', '15:14');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12808, 'GDR', 1, '02:51', '01:23');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12808, 'NLR', 2, '00:09', '02:10');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12808, 'TPTY', 3, '08:28', '16:22');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12808, 'VSKP', 4, '13:06', '12:11');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12809, 'CHE', 1, '16:12', '01:45');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12809, 'GDR', 2, '01:23', '18:12');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12809, 'OGL', 3, '02:12', '14:25');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12809, 'TPTY', 4, '07:03', '01:42');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12809, 'VSKP', 5, '18:11', '01:14');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12810, 'NLR', 1, '05:06', '23:44');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12810, 'RJY', 2, '17:02', '12:09');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12833, 'BZA', 1, '05:21', '09:49');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12833, 'GDR', 2, '03:44', '16:04');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12833, 'NLR', 3, '09:45', '19:34');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12833, 'TPTY', 4, '05:30', '17:49');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12833, 'VSKP', 5, '10:45', '06:58');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12834, 'BZA', 1, '02:48', '23:08');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12834, 'GDR', 2, '10:33', '15:59');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12834, 'NLR', 3, '20:17', '23:06');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12839, 'GDR', 1, '23:27', '19:07');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12839, 'RJY', 2, '04:10', '15:44');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12839, 'TPTY', 3, '08:05', '01:51');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12840, 'BZA', 1, '19:24', '21:19');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12840, 'CHE', 2, '20:48', '03:15');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12840, 'NLR', 3, '03:46', '08:54');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12840, 'OGL', 4, '11:40', '08:10');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12840, 'VSKP', 5, '13:08', '00:34');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12861, 'CHE', 1, '01:05', '06:15');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12861, 'GDR', 2, '04:43', '23:01');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12861, 'RJY', 3, '15:00', '05:23');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12861, 'TPTY', 4, '05:22', '10:03');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12862, 'GDR', 1, '16:00', '14:14');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12862, 'OGL', 2, '15:13', '08:22');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12863, 'CHE', 1, '13:39', '11:48');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12863, 'NLR', 2, '08:18', '14:03');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12863, 'RJY', 3, '03:11', '08:46');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12863, 'TPTY', 4, '20:40', '06:30');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12863, 'VSKP', 5, '09:27', '16:11');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12864, 'BZA', 1, '20:29', '06:10');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12864, 'NLR', 2, '10:54', '04:28');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12864, 'VSKP', 3, '20:48', '06:46');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12895, 'BZA', 1, '08:39', '22:02');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12895, 'GDR', 2, '18:27', '16:38');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12895, 'OGL', 3, '12:26', '10:51');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12895, 'VSKP', 4, '10:41', '11:59');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12896, 'NLR', 1, '01:16', '09:05');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12896, 'OGL', 2, '22:23', '17:26');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12896, 'RJY', 3, '10:32', '04:14');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12703, 'CHE', 1, '14:59', '02:53');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12703, 'TPTY', 2, '15:58', '05:05');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12703, 'VSKP', 3, '16:59', '19:16');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12704, 'CHE', 1, '03:12', '02:47');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12704, 'GDR', 2, '10:46', '00:17');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12704, 'OGL', 3, '16:48', '18:07');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12704, 'TPTY', 4, '03:18', '23:35');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12704, 'VSKP', 5, '10:09', '20:37');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12705, 'BZA', 1, '22:54', '07:10');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12705, 'NLR', 2, '02:12', '07:41');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12706, 'GDR', 1, '00:52', '16:04');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12706, 'OGL', 2, '15:31', '16:32');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12706, 'RJY', 3, '13:17', '07:23');
+-- INSERT INTO i213_trainstations (train_no, station_id, trst_index, trst_arrival, trst_departure) VALUES (12706, 'VSKP', 4, '11:19', '17:39');
+
